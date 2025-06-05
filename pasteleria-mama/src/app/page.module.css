@@ -183,4 +183,101 @@
   margin: 0 auto;
   line-height: 1.6;
   color: #666;
-} 
+}
+
+.categoriesSection {
+  padding-top: 1rem;
+  background-color: var(--background-light);
+  text-align: center;
+}
+
+.categoriesContainer {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.categoryCard {
+  background: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  padding: 0;
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px var(--shadow-moderate);
+}
+
+.categoryTop {
+  flex-grow: 1;
+  background: linear-gradient(135deg, #fff5f7 0%, #ffe4e9 100%);
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color-light);
+  font-family: var(--font-nunito);
+  font-size: 1.4rem;
+}
+
+.categoryBanner {
+  position: relative;
+  width: 100%;
+  background-color: #e31a32;
+  color: white;
+  font-family: var(--font-nunito);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 10;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .categoriesContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .categoryCard {
+    min-height: 220px;
+  }
+
+  .categoryTop {
+    padding: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .categoryBanner {
+    font-size: 1.6rem;
+    padding: 0.8rem 0;
+  }
+}
+
+/* Add specific placeholder images if you want to see different backgrounds */
+/*
+.categoryCard:nth-child(1) { background-image: url('/images/placeholder-cupcakes.jpg'); }
+.categoryCard:nth-child(2) { background-image: url('/images/placeholder-tortas.jpg'); }
+.categoryCard:nth-child(3) { background-image: url('/images/placeholder-postres.jpg'); }
+.categoryCard:nth-child(4) { background-image: url('/images/placeholder-galletas.jpg'); }
+*/ 

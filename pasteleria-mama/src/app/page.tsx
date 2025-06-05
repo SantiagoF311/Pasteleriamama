@@ -1,6 +1,6 @@
 'use client';
 
-import ProductCard from '@/components/ProductCard/ProductCard';
+import ProductCard from '@/app/components/ProductCard/ProductCard';
 import styles from './page.module.css';
 
 const featuredProducts = [
@@ -30,12 +30,14 @@ const featuredProducts = [
 export default function Home() {
   return (
     <main className={styles.main}>
+      {/* Uncommenting the hero section */}
+      
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Pastelería San Juan</h1>
           <p className={styles.heroSubtitle}>
-            Descubre el sabor de la tradición en cada bocado. 
-            Nuestros pasteles artesanales están hechos con los mejores ingredientes 
+            Descubre el sabor de la tradición en cada bocado.
+            Nuestros pasteles artesanales están hechos con los mejores ingredientes
             y mucho amor.
           </p>
           <div className={styles.buttonGroup}>
@@ -59,6 +61,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Categories Section */}
+      <section className={styles.categoriesSection}>
+        <div className={styles.categoriesContainer}>
+          <div className={styles.categoryCard}>
+            <div className={styles.categoryTop}>
+              {/* Content for the upper part if any, or can be a placeholder for image */}
+              {/* For now, maybe add category name here temporarily or an icon */}
+              {/* <div className={styles.categoryIcon}>Icon</div> */}
+            </div>
+            <div className={styles.categoryBanner}>Cupcakes</div>
+          </div>
+          <div className={styles.categoryCard}>
+            <div className={styles.categoryTop}></div>
+            <div className={styles.categoryBanner}>Tortas</div>
+          </div>
+          <div className={styles.categoryCard}>
+            <div className={styles.categoryTop}></div>
+            <div className={styles.categoryBanner}>Postres</div>
+          </div>
+          <div className={styles.categoryCard}>
+            <div className={styles.categoryTop}></div>
+            <div className={styles.categoryBanner}>Galletas</div>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.productsSection}>
         <h2 className={styles.sectionTitle}>Nuestros Productos Destacados</h2>
         <div className={styles.productsGrid}>
@@ -74,6 +102,16 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* <section className={styles.aboutSection}>
+        <div className={styles.aboutContainer}>
+          <p className={styles.aboutText}>
+            En Pastelería San Juan, cada dulce es una obra de arte hecha con los mejores ingredientes 
+            y mucho cariño. Nuestra tradición familiar se refleja en cada receta, 
+            manteniendo viva la autenticidad de los sabores de siempre.
+          </p>
+        </div>
+      </section> */}
     </main>
   );
-}
+} 
