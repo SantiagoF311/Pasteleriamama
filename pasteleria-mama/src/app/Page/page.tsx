@@ -74,6 +74,16 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* <section className={styles.aboutSection}>
+        <div className={styles.aboutContainer}>
+          <p className={styles.aboutText}>
+            En Pastelería San Juan, cada dulce es una obra de arte hecha con los mejores ingredientes 
+            y mucho cariño. Nuestra tradición familiar se refleja en cada receta, 
+            manteniendo viva la autenticidad de los sabores de siempre.
+          </p>
+        </div>
+      </section> */}
     </main>
   );
-}
+} 
