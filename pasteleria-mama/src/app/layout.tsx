@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Satisfy } from "next/font/google";
 import "./globals.css";
 import { Navigation } from './components/Navigation/Navigation';
 import { Footer } from './components/Footer/Footer';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap',
+});
+
+const satisfy = Satisfy({
+  subsets: ["latin"],
+  weight: ['400'],
+  display: 'swap',
+  variable: '--font-satisfy',
+});
 
 export const metadata: Metadata = {
   title: "Pastelería San Juan",
@@ -17,11 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="es" className={satisfy.variable}>
       <body className={inter.className}>
-        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <div className="app-container">
           <Navigation />
-          <main style={{ flex: 1 }}>
+          <main>
             {children}
           </main>
           <Footer />

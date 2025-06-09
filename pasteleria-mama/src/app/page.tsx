@@ -9,21 +9,21 @@ const featuredProducts = [
     name: 'Pastel de Chocolate',
     description: 'Delicioso pastel de chocolate con relleno de ganache y decorado con frutas frescas.',
     price: 25.99,
-    imageUrl: '/images/pastel-chocolate.jpg'
+    imageUrl: '/images/productosDestacados/torta1.jpg'
   },
   {
     id: 'cupcakes-vainilla',
     name: 'Cupcakes de Vainilla',
     description: 'Cupcakes esponjosos de vainilla con frosting de crema de mantequilla y decoraciones coloridas.',
     price: 15.99,
-    imageUrl: '/images/cupcakes-vainilla.jpg'
+    imageUrl: '/images/productosDestacados/torta2.jpg'
   },
   {
     id: 'tarta-frutas',
     name: 'Tarta de Frutas',
     description: 'Tarta fresca con una selección de frutas de temporada y crema pastelera casera.',
     price: 20.99,
-    imageUrl: '/images/tarta-frutas.jpg'
+    imageUrl: '/images/productosDestacados/torta3.jpg'
   }
 ];
 
@@ -34,7 +34,7 @@ export default function Home() {
       
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Pastelería San Juan</h1>
+          <h1 className={styles.heroTitle}>San Juan Pastelería</h1>
           <p className={styles.heroSubtitle}>
             Descubre el sabor de la tradición en cada bocado.
             Nuestros pasteles artesanales están hechos con los mejores ingredientes
@@ -66,22 +66,26 @@ export default function Home() {
         <div className={styles.categoriesContainer}>
           <div className={styles.categoryCard}>
             <div className={styles.categoryTop}>
-              {/* Content for the upper part if any, or can be a placeholder for image */}
-              {/* For now, maybe add category name here temporarily or an icon */}
-              {/* <div className={styles.categoryIcon}>Icon</div> */}
+              <img src="/images/torta1.jpg" alt="Cupcakes" className={styles.categoryImage} />
             </div>
             <div className={styles.categoryBanner}>Cupcakes</div>
           </div>
           <div className={styles.categoryCard}>
-            <div className={styles.categoryTop}></div>
+            <div className={styles.categoryTop}>
+              <img src="/images/torta2.jpg" alt="Tortas" className={styles.categoryImage} />
+            </div>
             <div className={styles.categoryBanner}>Tortas</div>
           </div>
           <div className={styles.categoryCard}>
-            <div className={styles.categoryTop}></div>
+            <div className={styles.categoryTop}>
+              <img src="/images/torta3.jpg" alt="Postres" className={styles.categoryImage} />
+            </div>
             <div className={styles.categoryBanner}>Postres</div>
           </div>
           <div className={styles.categoryCard}>
-            <div className={styles.categoryTop}></div>
+            <div className={styles.categoryTop}>
+              <img src="/images/torta4.jpg" alt="Galletas" className={styles.categoryImage} />
+            </div>
             <div className={styles.categoryBanner}>Galletas</div>
           </div>
         </div>
